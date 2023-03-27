@@ -1,8 +1,10 @@
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './reset.css';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
-import MovieCard from './components/MovieCard/MovieCard';
+import MovieList from './components/MovieList/MovieList';
 
 //Popular movies rendered on main page load
 //Scroll through pages of movies
@@ -14,10 +16,9 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <MovieCard
-        image='https://image.tmdb.org/t/p/w500/gOnmaxHo0412UVr1QM5Nekv1xPi.jpg'
-        name='Cocaine Bear'
-      />
+      <Routes>
+        <Route path='/' element={<MovieList />} />
+      </Routes>
       <Footer />
     </div>
   );
