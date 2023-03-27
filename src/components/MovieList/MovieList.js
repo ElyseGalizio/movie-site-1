@@ -11,15 +11,17 @@ function MovieList() {
       .then(response => setMovies(response.data.results))
   }
   return (
-    <div className="App">
+    <div>
+      <button onClick={fetchMovies}>Click to fetch movies</button>
       <div className='page-container'>
-        <button onClick={fetchMovies}>Click to fetch movies</button>
-        {movies.map(item =>
-          <MovieCard
-            image={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
-            name={item.original_title}
-          />
-        )}
+        <div className='movies-container'>
+          {movies.map(item =>
+            <MovieCard
+              image={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
+              name={item.original_title}
+            />
+          )}
+        </div>
       </div>
     </div>
   );

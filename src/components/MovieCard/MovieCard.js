@@ -3,8 +3,8 @@ import './MovieCard.css';
 function MovieCard(props) {
     return (
         <div className='card'>
-            <img src={props.image} />
-            <p>{props.name}</p>
+            <img className="card-image" src={props.image} />
+            <p className="card-title">{props.name}</p>
         </div>
     )
 }
