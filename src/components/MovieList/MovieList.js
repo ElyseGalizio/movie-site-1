@@ -6,19 +6,23 @@ import MovieCard from "../MovieCard/MovieCard";
 function MovieList() {
   const [movies, setMovies] = React.useState([])
 
+  React.useEffect(() => {
+    fetchMovies(1)
+  }, [])
+
   const fetchMovies = () => {
     axios.get('https://api.themoviedb.org/3/movie/popular?api_key=dc0fb7b28045cd04916b73e857aec4f9')
       .then(response => setMovies(response.data.results))
   }
   return (
     <div>
-      <button onClick={fetchMovies}>Click to fetch movies</button>
       <div className='page-container'>
         <div className='movies-container'>
           {movies.map(item =>
             <MovieCard
               image={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
               name={item.original_title}
+            // {...movies}
             />
           )}
         </div>
