@@ -7,7 +7,7 @@ function MovieList() {
   const [movies, setMovies] = React.useState([])
 
   React.useEffect(() => {
-    fetchMovies(1)
+    fetchMovies()
   }, [])
 
   const fetchMovies = () => {
@@ -20,9 +20,9 @@ function MovieList() {
         <div className='movies-container'>
           {movies.map(item =>
             <MovieCard
+              id={item.id}
               image={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
               name={item.original_title}
-            // {...movies}
             />
           )}
         </div>

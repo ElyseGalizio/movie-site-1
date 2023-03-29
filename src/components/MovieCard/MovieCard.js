@@ -7,6 +7,7 @@ function MovieCard(props) {
             <div className='card'>
                 <img className="card-image" src={props.image} alt={props.name} />
                 <p className="card-title">{props.name}</p>
+                {props.id}
             </div>
         </Link>
     )
