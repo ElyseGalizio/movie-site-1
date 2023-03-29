@@ -2,6 +2,19 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 30%;
-    height: 40%;
+    align-items: center;
+    width: 300px;
+    margin-top: 20px;
+}
+
+.card-image {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card-title {
+    margin-top: 5px;
+    font-size: 18px;
+    /* color: #ffffff; */
 }

@@ -1,11 +1,15 @@
+import { Link } from 'react-router-dom';
 import './MovieCard.css';
 
 function MovieCard(props) {
     return (
-        <div className='card'>
-            <img src={props.image} />
-            <p>{props.name}</p>
-        </div>
+        <Link to={`/movies/${props.id}`}>
+            <div className='card'>
+                <img className="card-image" src={props.image} alt={props.name} />
+                <p className="card-title">{props.name}</p>
+                {props.id}
+            </div>
+        </Link>
     )
 }
 
