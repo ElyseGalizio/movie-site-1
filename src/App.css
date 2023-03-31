@@ -1,4 +1,21 @@
+:root {
+    --primary-color: #22254b;
+    --secondary-color: #373b69;
+    --text-color: #f7f7f7
+}
+
+* {
+    box-sizing: border-box;
+}
+
 .App {
     min-height: calc(100vh - 170px);
-    /* background-color: #000; */
+    font-family: 'Ubuntu', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color)
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
 }

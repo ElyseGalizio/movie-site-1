@@ -6,8 +6,8 @@ function MovieCard(props) {
         <Link to={`/movies/${props.id}`}>
             <div className='card'>
                 <img className="card-image" src={props.image} alt={props.name} />
-                <p className="card-title">{props.name}</p>
-                {props.id}
+                <h2 className='card-title'>{props.name}</h2>
+                <p>{props.vote_average}</p>
             </div>
         </Link>
     )
