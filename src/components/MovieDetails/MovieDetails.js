@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 
 function MovieDetails() {
     const { id } = useParams();
-    const [movieDetails, setMovieDetails] = React.useState([]);
+    const [movieDetails, setMovieDetails] = React.useState();
 
     function fetchMovies() {
         axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=dc0fb7b28045cd04916b73e857aec4f9`)
@@ -13,7 +13,7 @@ function MovieDetails() {
 
     React.useEffect(() => {
         fetchMovies()
-    }, []);
+    });
 
     return (
         <div className="App">
