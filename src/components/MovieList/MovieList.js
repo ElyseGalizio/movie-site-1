@@ -17,6 +17,7 @@ function MovieList() {
   return (
     <div>
       <div className='page-container'>
+        <h1>Popular Movies</h1>
         <div className='movies-container'>
           {movies.map(item =>
             <MovieCard
@@ -24,7 +25,7 @@ function MovieList() {
               id={item.id}
               image={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
               name={item.original_title}
-              vote={item.vote_average}
+              vote_average={item.vote_average}
             />
           )}
         </div>
