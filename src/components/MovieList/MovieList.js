@@ -3,11 +3,6 @@ import axios from "axios";
 import './MovieList.css';
 import MovieCard from "../MovieCard/MovieCard";
 
-//style navbar
-//style footer
-//add React Router to navbar
-//create About page
-//add About page to React Router
 
 //if time: 
 //add search function
