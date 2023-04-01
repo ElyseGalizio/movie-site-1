@@ -3,7 +3,7 @@ import './Footer.css';
 function Footer() {
     return (
         <div className='footer'>
-            <p>Made by Elyse</p>
+            <p>EFG Films 2023</p>
         </div>
     )
 }

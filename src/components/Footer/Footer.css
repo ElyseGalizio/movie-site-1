@@ -2,6 +2,8 @@
     display: flex;
     height: 70px;
     align-items: center;
-    background-color: cadetblue;
-    padding: 0px 40px;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    font-size: 18px;
+
 }
