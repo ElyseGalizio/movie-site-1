@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import './MovieDetails.css';
 
 function MovieDetails() {
     const { id } = useParams();
@@ -18,9 +19,14 @@ function MovieDetails() {
     return (
         <div className="App">
             <h1>Movie Details</h1>
-            <p>{movieDetails?.original_title}</p>
-            <p>{movieDetails?.overview}</p>
-            <img src={`https://image.tmdb.org/t/p/w500/${movieDetails?.poster_path}`} alt={movieDetails?.original_title} />
+            <div className="movie-details-container">
+                <img src={`https://image.tmdb.org/t/p/w500/${movieDetails?.poster_path}`} alt={movieDetails?.original_title} className="movie-details-img" />
+                <div className="movie-details-information">
+                    <h2>{movieDetails?.original_title}</h2>
+                    <p>{movieDetails?.overview}</p>
+                    <p>Release Date: {movieDetails?.release_date}</p>
+                </div>
+            </div>
         </div>
     )
 }
