@@ -6,6 +6,7 @@ import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import MovieList from './components/MovieList/MovieList';
 import MovieDetails from './components/MovieDetails/MovieDetails';
+import About from './components/About/About';
 
 //Popular movies rendered on main page load
 //Scroll through pages of movies
@@ -20,6 +21,7 @@ function App() {
       <Routes>
         <Route path='/movies' element={<MovieList />} />
         <Route path='/movies/:id' element={<MovieDetails />} />
+        <Route path='/about' element={<About />} />
         <Route path='*' element={<Navigate to='/movies' replace />} />
       </Routes>
       <Footer />
