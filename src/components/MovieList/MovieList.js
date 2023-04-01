@@ -3,6 +3,15 @@ import axios from "axios";
 import './MovieList.css';
 import MovieCard from "../MovieCard/MovieCard";
 
+//style navbar
+//style footer
+//add React Router to navbar
+//create About page
+//add About page to React Router
+
+//if time: 
+//add search function
+//add buttons to switch between popular movies and top rated movies -OR- links in navbar
 function MovieList() {
   const [movies, setMovies] = React.useState([])
 
