@@ -18,7 +18,7 @@ function MovieDetails() {
 
     return (
         <div className="App">
-            <h1>Movie Details</h1>
+            <h1 className="app-head-container">Movie Details</h1>
             <div className="movie-details-container">
                 <img src={`https://image.tmdb.org/t/p/w500/${movieDetails?.poster_path}`} alt={movieDetails?.original_title} className="movie-details-img" />
                 <div className="movie-details-information">
