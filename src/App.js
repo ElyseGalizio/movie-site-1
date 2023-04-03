@@ -14,6 +14,7 @@ import About from './components/About/About';
 //Create Contact or About page
 //Add React Router function in Navbar
 //Update Footer
+
 function App() {
   return (
     <div className="App">
