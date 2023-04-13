@@ -10,6 +10,7 @@ h1 {
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
+    min-height: calc(100vh - 170px);
 }
 
 .movies-container {
@@ -28,9 +29,14 @@ input {
     border-radius: 50px;
     padding-left: 15px;
     color: #f7f7f7;
+    height: 30px;
 }
 
 input::placeholder {
     color: #f7f7f7;
     font-family: 'Ubuntu', sans-serif;
+}
+
+input::focus {
+    outline: none;
 }

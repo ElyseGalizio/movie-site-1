@@ -12,7 +12,7 @@ import MovieCard from "../MovieCard/MovieCard";
 function MovieList() {
   const [movies, setMovies] = React.useState([])
   // const [movieData, setMovieData] = React.useState([]);
-  // const [searchInput, setSearchInput] = React.useState('');
+  const [searchInput, setSearchInput] = React.useState('');
 
   React.useEffect(() => {
     fetchMovies()
@@ -37,7 +37,7 @@ function MovieList() {
         <div className="app-head-container">
           <h1>Popular Movies</h1>
           {/* <Search /> */}
-          {/* <input type="text" placeholder="Search Titles" /> */}
+          <input onChange={(event) => setSearchInput(event.target.value)} type="text" placeholder="Search Titles" />
 
         </div>
         <div className='movies-container'>
@@ -45,7 +45,11 @@ function MovieList() {
           add filter function here */}
           {/* create array of objects in replit, movie titles */}
 
-          {movies.map(item =>
+          {movies.filter(item => searchInput !== '' ?
+            item.original_title.toLowerCase().startsWith(searchInput.toLowerCase())
+            :
+            item
+          ).map(item =>
             <MovieCard
               key={item.id}
               id={item.id}
